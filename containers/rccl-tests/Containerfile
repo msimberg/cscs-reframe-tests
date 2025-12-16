@@ -1,4 +1,4 @@
-ARG BASE=rocm/dev-ubuntu-22.04:6.3.4-complete
+ARG BASE=rocm/dev-ubuntu-24.04:7.1.1-complete
 
 FROM $BASE
 
@@ -16,7 +16,7 @@ RUN git clone https://github.com/ROCM/rccl-tests.git && \
     cd ../ && \
     rm -rf rccl-tests
 
-FROM rocm/dev-ubuntu-22.04:6.3.4
+FROM rocm/dev-ubuntu-24.04:7.1.1
 
 RUN apt-get update && \
     apt-get install -y libhwloc15 rccl libopenmpi3 && \
